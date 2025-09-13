@@ -12,7 +12,9 @@ from huggingface_hub import InferenceClient
 # CONFIG
 # -----------------------
 load_dotenv()
-HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
+
+import streamlit as st
+HF_TOKEN = st.secrets.get("HUGGINGFACE_TOKEN")
 MODEL_ID = "mistralai/Mistral-7B-Instruct-v0.3"
 
 # Default parameters
