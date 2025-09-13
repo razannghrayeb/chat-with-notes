@@ -14,7 +14,8 @@ from huggingface_hub import InferenceClient
 load_dotenv()
 
 import streamlit as st
-HF_TOKEN = st.secrets.get("HUGGINGFACE_TOKEN")
+
+HF_TOKEN = os.getenv("HUGGINGFACE_TOKEN") or st.secrets["HUGGINGFACE_TOKEN"] 
 MODEL_ID = "mistralai/Mistral-7B-Instruct-v0.3"
 
 # Default parameters
