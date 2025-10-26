@@ -139,7 +139,7 @@ if uploaded_file is not None:
             with st.chat_message("assistant"):
                 with st.spinner("Thinking..."):
                     # Retrieve docs
-                    retrieved_docs = retriever.get_relevant_documents(prompt)
+                    retrieved_docs = retriever.invoke(prompt)
                     context = "\n\n".join([d.page_content for d in retrieved_docs])
 
                     # Build prompt
