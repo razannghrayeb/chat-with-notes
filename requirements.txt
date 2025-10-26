@@ -1,8 +1,10 @@
 streamlit
+python-dotenv
 torch
+langchain
 langchain-community
+pypdf
 faiss-cpu
 huggingface-hub
 transformers
 sentence-transformers
-pypdf
